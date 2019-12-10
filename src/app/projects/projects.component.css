@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Cardo|Notable&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Cardo|Concert+One|Notable&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Cardo|Concert+One|Notable|Oleo+Script&display=swap');
+h1{
+    font-family: 'Carter One', cursive;
+}
+
+.repo{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.why{
+    font-size: 2rem;
+}
+.title-underline{
+    width: 200px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+.name{
+  font-family: 'Notable', sans-serif;
+}

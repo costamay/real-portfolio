@@ -1,0 +1,71 @@
+<div class="jumbotron me text-center text-white bg-info m-0">
+        <h1>Github Search</h1>
+        <hr>
+        <p>An application that allows you to search for github users and repositories</p>
+      </div>
+      
+      <app-searc-form (emitSearch)="searchUser($event)"></app-searc-form>
+      <div class="card">
+        <div class="card-header text-center text-white why bg-dark">
+          <span *ngIf="user.name" class="name"> <span class="text-primary">Name</span >:{{user.name}}  <span class="text-primary">Username</span>:{{user.login}}</span>
+      
+        </div>
+        <div class="card-body">
+          <div class="row">
+      
+            <div class="col-sm-5">
+              <ul class="list-group">
+                <li class="list-group-item" *ngIf="user.created_at">Created on:{{user.created_at|date}}</li>
+                <li class="list-group-item" *ngIf="user.company">Company:{{user.company}}</li>
+                <li class="list-group-item" *ngIf="user.email">User Email:{{user.email}}</li>
+                <li class="list-group-item" *ngIf="user.location">Location:{{user.location}}</li>
+              </ul>
+      
+            </div>
+            <div class="col-sm-3">
+              <img class="rounded-circle img-fluid" src="{{user.avatar_url}}" alt="profile-image">
+            </div>
+            <div class="col-sm-4 ">
+              <ul class="list-group">
+                <li class="list-group-item">Followers:{{user.followers}}</li>
+                <li class="list-group-item">Following:{{user.following}}</li>
+      
+                <li class="list-group-item" *ngIf="user.public_repos">Public repos:{{user.public_repos}}</li>
+              </ul>
+              <p><a href="{{user.html_url}}" target="_blank" class="btn btn-primary btn-sm m-2">View profile on Github</a></p>
+      
+      
+            </div>
+          </div>
+          <div>
+            <h1 class="text-center text-dark mt-3"> REPOSITORIES</h1>
+          </div>
+          <div class="title-underline bg-danger"></div>
+          <div class="row mt-4">
+      
+      
+      
+            <div class="col-md-3 mb-4 " *ngFor="let repo of repo">
+      
+              <div class="card h-100">
+                <div class="card-header repo">
+                  {{repo.name|uppercase}}
+                </div>
+                <div appHighlight *ngIf='repo.description' class="card-body">
+                  {{repo.description}}
+      
+                </div>
+      
+      
+                <p><strong>update:{{repo.updated_at|timeCount}}</strong> </p>
+                <div class="card-footer">
+                  <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-primary">View this project on Github</a>
+                </div>
+              </div>
+      
+            </div>
+      
+          </div>
+      
+      
+        </div>

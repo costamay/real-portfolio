@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  accesstoken:"94af8fc63f808eb3158dd65ea1a4598ff80e0dba",
+  GITAPIKEY: "94af8fc63f808eb3158dd65ea1a4598ff80e0dba"
 };
 
 /*

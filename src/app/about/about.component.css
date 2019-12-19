@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
 .underline{
     width: 200px;
     height: 10px;
@@ -23,3 +24,14 @@
    li a:hover{
        text-decoration: none;
    }
+
+   ul li p{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+   }
+   
+.scrollable {
+    height: 600px; /* or any value */
+    overflow-y: auto;
+    
+}

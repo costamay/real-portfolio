@@ -1,10 +1,10 @@
-<div class="jumbotron me text-center text-white bg-info m-0">
-        <h1>Github Search</h1>
+<div class="jumbotron me text-center text-white bg-info ">
+        <h1>Github Projects</h1>
         <hr>
-        <p>An application that allows you to search for github users and repositories</p>
+        <p>Feel free to visit my github account to view some of my projects</p>
       </div>
       
-      <app-searc-form (emitSearch)="searchUser($event)"></app-searc-form>
+      <!-- <app-search-form (emitSearch)="searchUser($event)"></app-search-form> -->
       <div class="card">
         <div class="card-header text-center text-white why bg-dark">
           <span *ngIf="user.name" class="name"> <span class="text-primary">Name</span >:{{user.name}}  <span class="text-primary">Username</span>:{{user.login}}</span>
@@ -27,8 +27,8 @@
             </div>
             <div class="col-sm-4 ">
               <ul class="list-group">
-                <li class="list-group-item">Followers:{{user.followers}}</li>
-                <li class="list-group-item">Following:{{user.following}}</li>
+                <li class="list-group-item btn btn-yellow">Followers:{{user.followers}}</li>
+                <li class="list-group-item btn btn-success">Following:{{user.following}}</li>
       
                 <li class="list-group-item" *ngIf="user.public_repos">Public repos:{{user.public_repos}}</li>
               </ul>
@@ -59,7 +59,7 @@
       
                 <p><strong>update:{{repo.updated_at|timeCount}}</strong> </p>
                 <div class="card-footer">
-                  <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-primary">View this project on Github</a>
+                     <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary btn-sm">View this project on Github</a>
                 </div>
               </div>
       

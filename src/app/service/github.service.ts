@@ -35,17 +35,19 @@ repo:Githubrepo;
      }
      let searchPoint = 'https://api.github.com/users/' + searchTerm + '?access_token=' + environment.GITAPIKEY;
      
-     let promise = new Promise((reject, resolve) =>{
+     let promise = new Promise((resolve, reject) =>{
       this.http.get<ApiResponse>(searchPoint).toPromise().then((results)=>{
       this.user = results;
-       
       resolve();
-      },
+       
+    },
       (error) =>{
         reject();
       }
       );
      });
+    //  console.log(/)
+
      return promise;
 
   }
@@ -64,12 +66,15 @@ repo:Githubrepo;
       this.http.get<ApiResponse>(searchPoint).toPromise().then(
         (repoResults) =>{
           this.repo = repoResults;
+          resolve()
         },
         (error) =>{
           reject();
+          console.log(error)
         }
       );
     });
+    console.log(promise)
     return promise;
   }
 }

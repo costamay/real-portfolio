@@ -1,0 +1,15 @@
+<div style="margin: 20px">
+    <div class="card">
+        <div class="card-body">
+            <form class="form-inline">
+                <input class="rounded form-control" type="text" class="" placeholder="Enter github username"
+                    name="searchTerm" [(ngModel)]="searchTerm">
+                <!-- <div [hidden]='searchTerm.valid || searchTerm.pristine' class="alert alert-danger">
+                    <p>username is required</p>
+                </div> -->
+                <button type="submit" name="button" class=" btn btn-primary ml-3 " (click)="search()">Search</button>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+#index{
+    
+    /* background-image: url('src/assets/images/tito.jpg'); */
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(src/assets/images/write.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
+}
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+  section{
+      height: 100%;
+  }
+
+  .intro{
+    font-family: 'Merienda One', cursive;
+    padding: 25%;
+    color: white;
+    
+  }
+
+  .intro h1{
+    font-size: 4rem;
+  }
+
+  nav li a{
+    font-size: 10rem;
+  }

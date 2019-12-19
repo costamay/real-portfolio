@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+.underline{
+    width: 200px;
+    height: 10px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.about{
+    font-family: 'Merienda One', cursive;
+}
+ ul li{
+    background: url(https://www.computerhope.com/issues/pictures/bullet.gif) no-repeat top left;
+    background-position: 0 5px;
+    line-height: 1.5625;
+    padding: 0 0 4px 30px;
+    margin-left: 0em;
+    list-style: none;
+ }
+  li p:hover{
+      color: green;
+  }
+   li a:hover{
+       text-decoration: none;
+   }

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400");
+
+.resume .skills ul{
+    margin:0;
+    padding:0;
+}
+.resume .skills{
+    padding-right:50px;
+}
+.skills ul li{
+    display:block;
+    margin:20px 0;}
+.skills ul li h3{
+    color:#636368;
+    font-family:"PT Sans", sans-serif;
+    font-size:18px;
+    font-weight:700;
+    margin:5px 0;
+    padding:5px 0;
+    text-transform:uppercase}
+.skills ul li p{
+    color:#838c95;
+    font-size:14px;
+    line-height:24px;
+    padding:5px 0;
+}
+
+.resume{
+    background:none repeat scroll 0 0 #f2f2f2;
+    overflow:hidden;
+    padding:35px 0 50px;
+    position:relative;
+}
+/* .resume .sec-divider{
+    background:url("../img/ninja.svg") no-repeat scroll center center rgba(0, 0, 0, 0);display:block;height:52px;margin:40px auto 20px;width:52px;} */
+.resume .section-title{
+    color:black;
+    font-family:"Merriweather", serif;font-size:24px;
+    font-style:italic;
+    margin:5px auto;
+    padding:20px;
+    text-align:center;
+}

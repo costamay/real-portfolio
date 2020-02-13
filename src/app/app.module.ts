@@ -14,6 +14,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { FormsModule } from '@angular/forms'
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { SkillsComponent } from './skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     TimeCountPipe,
     FooterComponent,
     AboutComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

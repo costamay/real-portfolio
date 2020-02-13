@@ -1,71 +1,74 @@
 <div class="jumbotron me text-center text-white bg-info ">
-        <h1>Github Projects</h1>
-        <hr>
-        <p>Feel free to visit my github account to view some of my projects</p>
+  <h1>Github Projects</h1>
+  <hr>
+  <p>Feel free to visit my github account to view some of my projects</p>
+</div>
+
+<!-- <app-search-form (emitSearch)="searchUser($event)"></app-search-form> -->
+<div class="card">
+  <div class="card-header text-center text-white why bg-dark">
+    <h3><span *ngIf="user.name" class="name"> <span class="text-primary">Name</span>:{{user.name}} <span
+          class="text-primary">Username</span>:{{user.login}}</span></h3>
+
+  </div>
+  <div class="card-body">
+    <div class="row">
+
+      <div class="col-sm-5 text-center">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="user.created_at">Created on:{{user.created_at|date}}</li>
+          <li class="list-group-item" *ngIf="user.company">Company:{{user.company}}</li>
+          <li class="list-group-item" *ngIf="user.email">User Email:{{user.email}}</li>
+          <li class="list-group-item" *ngIf="user.location">Location:{{user.location}}</li>
+        </ul>
+
       </div>
-      
-      <!-- <app-search-form (emitSearch)="searchUser($event)"></app-search-form> -->
-      <div class="card">
-        <div class="card-header text-center text-white why bg-dark">
-         <h3><span *ngIf="user.name" class="name"> <span class="text-primary">Name</span >:{{user.name}}  <span class="text-primary">Username</span>:{{user.login}}</span>
-      
+      <div class="col-sm-3 text-center">
+        <img class="rounded-circle img-fluid" src="{{user.avatar_url}}" alt="profile-image">
+      </div>
+      <div class="col-sm-4 ">
+        <ul class="list-group">
+          <li class="list-group-item btn btn-yellow">Followers:{{user.followers}}</li>
+          <li class="list-group-item btn btn-success">Following:{{user.following}}</li>
+
+          <li class="list-group-item  btn btn-info" *ngIf="user.public_repos">Public repos:{{user.public_repos}}</li>
+        </ul>
+        <p class="text-center"><a href="{{user.html_url}}" target="_blank" class="btn btn-primary  m-2 text-center">View
+            profile on Github</a></p>
+
+
+      </div>
+    </div>
+    <div>
+      <h1 class="text-center text-dark mt-3"> REPOSITORIES</h1>
+    </div>
+    <div class="title-underline bg-danger"></div>
+    <div class="row mt-4">
+
+
+
+      <div class="col-md-3 mb-4 " *ngFor="let repo of repo">
+
+        <div class="card h-100">
+          <div class="card-header repo text-center">
+            {{repo.name|uppercase}}
+          </div>
+          <div appHighlight *ngIf='repo.description' class="card-body">
+            {{repo.description}}
+
+          </div>
+
+
+          <!-- <p><strong>update:{{repo.updated_at|timeCount}}</strong> </p> -->
+          <div class="card-footer text-center">
+            <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary btn-sm">View this project on Github</a>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="row">
-      
-            <div class="col-sm-5 text-center">
-              <ul class="list-group">
-                <li class="list-group-item" *ngIf="user.created_at">Created on:{{user.created_at|date}}</li>
-                <li class="list-group-item" *ngIf="user.company">Company:{{user.company}}</li>
-                <li class="list-group-item" *ngIf="user.email">User Email:{{user.email}}</li>
-                <li class="list-group-item" *ngIf="user.location">Location:{{user.location}}</li>
-              </ul>
-      
-            </div>
-            <div class="col-sm-3 text-center">
-              <img class="rounded-circle img-fluid" src="{{user.avatar_url}}" alt="profile-image">
-            </div>
-            <div class="col-sm-4 ">
-              <ul class="list-group">
-                <li class="list-group-item btn btn-yellow">Followers:{{user.followers}}</li>
-                <li class="list-group-item btn btn-success">Following:{{user.following}}</li>
-      
-                <li class="list-group-item  btn btn-info" *ngIf="user.public_repos">Public repos:{{user.public_repos}}</li>
-              </ul>
-              <p class="text-center"><a href="{{user.html_url}}" target="_blank" class="btn btn-primary  m-2 text-center">View profile on Github</a></p>
-      
-      
-            </div>
-          </div>
-          <div>
-            <h1 class="text-center text-dark mt-3"> REPOSITORIES</h1>
-          </div>
-          <div class="title-underline bg-danger"></div>
-          <div class="row mt-4" >
-      
-      
-      
-            <div class="col-md-3 mb-4 " *ngFor="let repo of repo" >
-      
-              <div class="card h-100" >
-                <div class="card-header repo text-center">
-                  {{repo.name|uppercase}}
-                </div>
-                <div appHighlight *ngIf='repo.description' class="card-body">
-                  {{repo.description}}
-      
-                </div>
-      
-      
-                <!-- <p><strong>update:{{repo.updated_at|timeCount}}</strong> </p> -->
-                <div class="card-footer text-center">
-                     <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary btn-sm">View this project on Github</a>
-                </div>
-              </div>
-      
-            </div>
-      
-          </div>
-      
-      
-        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

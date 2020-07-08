@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.4",
     "@ngx-progressbar/core": "^3.0.2",
     "@ngx-progressbar/http-client": "^3.0.2",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "jquery": "^3.4.1",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.3",
